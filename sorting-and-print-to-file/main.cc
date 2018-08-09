@@ -6,7 +6,6 @@
 #include "EmployeeHelperClass.h"
 
 const int MAX = 30;
-
 void print(const Employee& E1);
 
 int main(){
@@ -25,14 +24,12 @@ int main(){
 	cin.sync();
 	getline(cin, outputFileName);
 	ofstream outputFile(outputFileName); //Open the output file
-
 	if (!inputFile.is_open() || !outputFile.is_open()){
 		cout << "Cannot open file." << endl;
 		inputFile.close();
 		outputFile.close();
 		exit(0);
 	}
-
 	length = EmployeeHelperClass::FillArray(inputFile, employeeArray);
 	if (length == 0){
 		cout << "This file is empty.\n\n";
@@ -44,7 +41,7 @@ int main(){
 	}
 
 	outputFile << "\t\t\Whoop whoop Awesome Company Employee Information\n"
-  << "-------------------------------------------------------------------------\n\n";
+  		<< "-------------------------------------------------------------------------\n\n";
 	outputFile << "Default List\n\n";
 	EmployeeHelperClass::print(outputFile, employeeArray, length); 
 	outputFile << "\n\nSorted by ID#\n\n";
