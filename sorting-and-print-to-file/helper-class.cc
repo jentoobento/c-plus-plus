@@ -31,7 +31,7 @@ void EmployeeHelperClass::print(ofstream& outputFile, Employee employeeArray[], 
 void EmployeeHelperClass::bubbleSort(Employee employeeArray[], size_t length, size_t flag){
 	for (size_t i = 0; i < length; i++){
 		for (size_t j = 0; j < length - i - 1; j++){
-			if (flag == 1) // Sort based on ID{
+			if (flag == 1) {
 				int tempNum;
 				if (employeeArray[j].getID() > employeeArray[j + 1].getID()){
 					Employee tempNum = employeeArray[j];
