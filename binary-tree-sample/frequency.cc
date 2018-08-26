@@ -18,7 +18,7 @@ bool LetterFrequencyList::contains(char ltr) {
 void LetterFrequencyList::copy(const LetterFrequencyList & Other){
 	LetterNode * current = Other.HeadPtr->Next; 
 	LetterNode * iterator = HeadPtr = new LetterNode('-', 0, nullptr); 
-	while (current != nullptr) //go through each node{
+	while (current != nullptr) {
 		iterator->Next = new LetterNode(current->letter, current->frequency, nullptr);
 		current = current->Next; 
 		iterator = iterator->Next; 
